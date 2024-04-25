@@ -10,7 +10,7 @@ function smallestMissingPositiveInteger(nums) {
 
   
   for (let i = 0; i < uniquePositives.length; i++) {
-    // If the current number is equal to the smallest missing positive, increment smallestMissing
+   
     if (uniquePositives[i] === smallestMissing) {
       smallestMissing++;
     } else {
