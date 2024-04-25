@@ -18,7 +18,7 @@ function lengthOfLongestSubstring(s) {
         }
        
         charIndexMap[currentChar] = right;
-        // Update the maximum length if needed
+        
         maxLength = Math.max(maxLength, right - left + 1);
     }
 
