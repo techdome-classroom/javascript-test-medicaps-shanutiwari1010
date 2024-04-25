@@ -18,7 +18,7 @@ function smallestMissingPositiveInteger(nums) {
       return smallestMissing;
     }
   }
-// If all numbers are in sequence without any gap, return the next integer after the last one
+
   return smallestMissing;
 }
 
