@@ -14,12 +14,11 @@ function smallestMissingPositiveInteger(nums) {
     if (uniquePositives[i] === smallestMissing) {
       smallestMissing++;
     } else {
-      // If the current number is greater than the smallest missing positive, return smallestMissing
+      
       return smallestMissing;
     }
   }
-
-  // If all numbers are in sequence without any gap, return the next integer after the last one
+// If all numbers are in sequence without any gap, return the next integer after the last one
   return smallestMissing;
 }
 
