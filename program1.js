@@ -1,6 +1,3 @@
-
-
-
 function longestSubstring(s) {
     let maxLength = 0;
     let start = 0;
