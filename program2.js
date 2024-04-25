@@ -1,25 +1,17 @@
-module.exports = smallestMissingPositiveInteger;
-function smallestMissingPositiveInteger(nums) {
- 
-  const uniquePositives = [...new Set(nums.filter((num) => num > 0))];
+function smallest_missing_positive_integer(arr) {
+  const uniquePositiveArr = Array.from(new Set(arr.filter((num) => num > 0)));
+  const visited = {};
 
- 
-  uniquePositives.sort((a, b) => a - b);
+  for (const num of uniquePositiveArr) {
+    visited[num] = true;
+  }
 
   let smallestMissing = 1;
-
-  
-  for (let i = 0; i < uniquePositives.length; i++) {
-   
-    if (uniquePositives[i] === smallestMissing) {
-      smallestMissing++;
-    } else {
-      
-      return smallestMissing;
-    }
+  while (visited[smallestMissing]) {
+    smallestMissing++;
   }
 
   return smallestMissing;
 }
 
-module.exports = smallestMissingPositiveInteger;
+module.exports = smallest_missing_positive_integer;
