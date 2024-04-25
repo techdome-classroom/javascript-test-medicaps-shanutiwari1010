@@ -1,12 +1,11 @@
 module.exports = smallestMissingPositiveInteger;
 function smallestMissingPositiveInteger(nums) {
-  // Filter out non-positive integers and duplicates
+ 
   const uniquePositives = [...new Set(nums.filter((num) => num > 0))];
 
-  // Sort the array
+ 
   uniquePositives.sort((a, b) => a - b);
 
-  // Initialize smallest missing positive integer to 1
   let smallestMissing = 1;
 
   // Loop through sorted positive integers
