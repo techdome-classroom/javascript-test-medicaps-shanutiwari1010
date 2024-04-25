@@ -13,7 +13,7 @@ function lengthOfLongestSubstring(s) {
     for (let right = 0; right < s.length; right++) {
         const currentChar = s[right];
         if (charIndexMap[currentChar] !== undefined && charIndexMap[currentChar] >= left) {
-            // If the current character is already in the substring, update the left pointer
+            
             left = charIndexMap[currentChar] + 1;
         }
         // Update the index of the current character
